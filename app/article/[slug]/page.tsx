@@ -1,3 +1,5 @@
+"use client";
+
 import Image from 'next/image';
 import Navigation from '../../../components/Navigation';
 import ReadingProgress from '../../../components/ReadingProgress';
@@ -11,24 +13,24 @@ import Footer from '../../../components/Footer';
 
 // This would typically come from a database or CMS
 const article = {
-    title: 'The Art of Minimalist Living: Finding Beauty in Simplicity',
-    subtitle: 'Discover how embracing minimalism can transform your space, mindset, and daily routine into a sanctuary of intentional living',
-    category: 'Lifestyle',
-    image: '/images/article-1.jpg',
-    author: {
-        name: 'Emma Davidson',
-        role: 'Lifestyle Editor',
-        bio: 'Emma is a minimalist lifestyle expert and interior design consultant with over 10 years of experience helping people create meaningful, clutter-free spaces. Her work has been featured in top design magazines.',
-        image: '/images/influencer-1.jpg',
-        social: {
-            twitter: 'https://twitter.com/emmadavidson',
-            instagram: 'https://instagram.com/emmadavidson',
-            linkedin: 'https://linkedin.com/in/emmadavidson'
-        }
-    },
-    date: 'February 8, 2026',
-    readTime: '8 min read',
-    content: `
+  title: 'The Art of Minimalist Living: Finding Beauty in Simplicity',
+  subtitle: 'Discover how embracing minimalism can transform your space, mindset, and daily routine into a sanctuary of intentional living',
+  category: 'Lifestyle',
+  image: '/images/article-1.jpg',
+  author: {
+    name: 'Emma Davidson',
+    role: 'Lifestyle Editor',
+    bio: 'Emma is a minimalist lifestyle expert and interior design consultant with over 10 years of experience helping people create meaningful, clutter-free spaces. Her work has been featured in top design magazines.',
+    image: '/images/influencer-1.jpg',
+    social: {
+      twitter: 'https://twitter.com/emmadavidson',
+      instagram: 'https://instagram.com/emmadavidson',
+      linkedin: 'https://linkedin.com/in/emmadavidson'
+    }
+  },
+  date: 'February 8, 2026',
+  readTime: '8 min read',
+  content: `
     <p class="lead-paragraph">In a world that constantly demands more—more possessions, more activities, more everything—the philosophy of minimalist living offers a refreshing counterpoint. It's not about deprivation; it's about intentionality. It's about creating space for what truly matters and letting go of the rest.</p>
 
     <h2 id="understanding-minimalism">Understanding Modern Minimalism</h2>
@@ -103,110 +105,110 @@ const article = {
 };
 
 const tocItems = [
-    { id: 'understanding-minimalism', title: 'Understanding Modern Minimalism', level: 1 },
-    { id: 'getting-started', title: 'Getting Started: The 30-Day Challenge', level: 1 },
-    { id: 'mindful-spaces', title: 'Creating Mindful Spaces', level: 1 },
-    { id: 'benefits', title: 'The Ripple Effect', level: 1 },
-    { id: 'common-mistakes', title: 'Avoiding Common Pitfalls', level: 1 },
-    { id: 'maintaining', title: 'Maintaining the Lifestyle', level: 1 },
-    { id: 'conclusion', title: 'Your Journey Forward', level: 1 },
+  { id: 'understanding-minimalism', title: 'Understanding Modern Minimalism', level: 1 },
+  { id: 'getting-started', title: 'Getting Started: The 30-Day Challenge', level: 1 },
+  { id: 'mindful-spaces', title: 'Creating Mindful Spaces', level: 1 },
+  { id: 'benefits', title: 'The Ripple Effect', level: 1 },
+  { id: 'common-mistakes', title: 'Avoiding Common Pitfalls', level: 1 },
+  { id: 'maintaining', title: 'Maintaining the Lifestyle', level: 1 },
+  { id: 'conclusion', title: 'Your Journey Forward', level: 1 },
 ];
 
 const relatedArticles = [
-    {
-        image: '/images/article-3.jpg',
-        category: 'Wellness',
-        title: 'Morning Rituals for a Mindful Day',
-        excerpt: 'Start your day with intention through these transformative morning practices',
-        author: 'Sarah Chen',
-        authorImage: '/images/influencer-2.jpg',
-        readTime: '6 min read'
-    },
-    {
-        image: '/images/article-4.jpg',
-        category: 'Travel',
-        title: 'Slow Travel: The Art of Meaningful Journeys',
-        excerpt: 'Discover how traveling with intention can transform your perspective',
-        author: 'Maya Rodriguez',
-        authorImage: '/images/influencer-3.jpg',
-        readTime: '7 min read'
-    },
-    {
-        image: '/images/article-5.jpg',
-        category: 'Wellness',
-        title: 'Digital Minimalism in a Connected World',
-        excerpt: 'Finding balance and presence in the age of constant connectivity',
-        author: 'Lucas Bennett',
-        authorImage: '/images/influencer-4.jpg',
-        readTime: '5 min read'
-    }
+  {
+    image: '/images/article-3.jpg',
+    category: 'Wellness',
+    title: 'Morning Rituals for a Mindful Day',
+    excerpt: 'Start your day with intention through these transformative morning practices',
+    author: 'Sarah Chen',
+    authorImage: '/images/influencer-2.jpg',
+    readTime: '6 min read'
+  },
+  {
+    image: '/images/article-4.jpg',
+    category: 'Travel',
+    title: 'Slow Travel: The Art of Meaningful Journeys',
+    excerpt: 'Discover how traveling with intention can transform your perspective',
+    author: 'Maya Rodriguez',
+    authorImage: '/images/influencer-3.jpg',
+    readTime: '7 min read'
+  },
+  {
+    image: '/images/article-5.jpg',
+    category: 'Wellness',
+    title: 'Digital Minimalism in a Connected World',
+    excerpt: 'Finding balance and presence in the age of constant connectivity',
+    author: 'Lucas Bennett',
+    authorImage: '/images/influencer-4.jpg',
+    readTime: '5 min read'
+  }
 ];
 
 export default function ArticlePage() {
-    return (
-        <>
-            <ReadingProgress />
-            <Navigation />
+  return (
+    <>
+      <ReadingProgress />
+      <Navigation />
 
-            <article className="article-page">
-                {/* Hero Section */}
-                <div className="article-hero">
-                    <Image
-                        src={article.image}
-                        alt={article.title}
-                        fill
-                        style={{ objectFit: 'cover' }}
-                        priority
-                    />
-                    <div className="hero-overlay"></div>
+      <article className="article-page">
+        {/* Hero Section */}
+        <div className="article-hero">
+          <Image
+            src={article.image}
+            alt={article.title}
+            fill
+            style={{ objectFit: 'cover' }}
+            priority
+          />
+          <div className="hero-overlay"></div>
 
-                    <div className="hero-content container">
-                        <div className="article-meta">
-                            <span className="category glass">{article.category}</span>
-                            <span className="date">{article.date}</span>
-                            <span className="read-time">{article.readTime}</span>
-                        </div>
+          <div className="hero-content container">
+            <div className="article-meta">
+              <span className="category glass">{article.category}</span>
+              <span className="date">{article.date}</span>
+              <span className="read-time">{article.readTime}</span>
+            </div>
 
-                        <h1 className="article-title">{article.title}</h1>
-                        <p className="article-subtitle">{article.subtitle}</p>
-                    </div>
-                </div>
+            <h1 className="article-title">{article.title}</h1>
+            <p className="article-subtitle">{article.subtitle}</p>
+          </div>
+        </div>
 
-                {/* Article Content */}
-                <div className="container article-container">
-                    <div className="article-layout">
-                        {/* Table of Contents - Desktop Only */}
-                        <aside className="article-sidebar">
-                            <TableOfContents items={tocItems} />
-                        </aside>
+        {/* Article Content */}
+        <div className="container article-container">
+          <div className="article-layout">
+            {/* Table of Contents - Desktop Only */}
+            <aside className="article-sidebar">
+              <TableOfContents items={tocItems} />
+            </aside>
 
-                        {/* Main Content */}
-                        <div className="article-body">
-                            <div
-                                className="article-content"
-                                dangerouslySetInnerHTML={{ __html: article.content }}
-                            />
+            {/* Main Content */}
+            <div className="article-body">
+              <div
+                className="article-content"
+                dangerouslySetInnerHTML={{ __html: article.content }}
+              />
 
-                            <ShareButtons
-                                url={`https://lifestylestories.com/article/minimalist-living`}
-                                title={article.title}
-                            />
+              <ShareButtons
+                url={`https://lifestylestories.com/article/minimalist-living`}
+                title={article.title}
+              />
 
-                            <AuthorBio {...article.author} />
+              <AuthorBio {...article.author} />
 
-                            <Comments />
-                        </div>
-                    </div>
-                </div>
+              <Comments />
+            </div>
+          </div>
+        </div>
 
-                <RelatedArticles articles={relatedArticles} />
+        <RelatedArticles articles={relatedArticles} />
 
-                <Newsletter />
-            </article>
+        <Newsletter />
+      </article>
 
-            <Footer />
+      <Footer />
 
-            <style jsx>{`
+      <style jsx>{`
         .article-page {
           background: white;
         }
@@ -433,6 +435,6 @@ export default function ArticlePage() {
           }
         }
       `}</style>
-        </>
-    );
+    </>
+  );
 }

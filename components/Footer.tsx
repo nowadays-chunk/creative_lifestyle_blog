@@ -42,33 +42,30 @@ export default function Footer() {
           <div className="footer-section">
             <h4 className="footer-heading">Explore</h4>
             <ul className="footer-links">
-              <li><a href="#lifestyle">Lifestyle</a></li>
-              <li><a href="#fashion">Fashion</a></li>
-              <li><a href="#wellness">Wellness</a></li>
-              <li><a href="#travel">Travel</a></li>
-              <li><a href="#creative">Creative</a></li>
+              <li><a href="/blog">All Articles</a></li>
+              <li><a href="/blog">Lifestyle</a></li>
+              <li><a href="/blog">Fashion</a></li>
+              <li><a href="/blog">Wellness</a></li>
+              <li><a href="/blog">Travel</a></li>
             </ul>
           </div>
 
           <div className="footer-section">
             <h4 className="footer-heading">Company</h4>
             <ul className="footer-links">
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#team">Our Team</a></li>
-              <li><a href="#careers">Careers</a></li>
-              <li><a href="#press">Press</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/team">Our Team</a></li>
+              <li><a href="/careers">Careers</a></li>
+              <li><a href="/contact">Contact</a></li>
             </ul>
           </div>
 
           <div className="footer-section">
             <h4 className="footer-heading">Resources</h4>
             <ul className="footer-links">
-              <li><a href="#blog">Blog</a></li>
-              <li><a href="#guides">Style Guides</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/contact">Contact Us</a></li>
               <li><a href="#newsletter">Newsletter</a></li>
-              <li><a href="#media">Media Kit</a></li>
-              <li><a href="#partners">Partners</a></li>
             </ul>
           </div>
         </div>
@@ -78,11 +75,9 @@ export default function Footer() {
             © {currentYear} Lifestyle Stories. All rights reserved.
           </p>
           <div className="legal-links">
-            <a href="#privacy">Privacy Policy</a>
+            <a href="/privacy">Privacy Policy</a>
             <span className="separator">•</span>
-            <a href="#terms">Terms of Service</a>
-            <span className="separator">•</span>
-            <a href="#cookies">Cookie Policy</a>
+            <a href="/terms">Terms of Service</a>
           </div>
         </div>
       </div>

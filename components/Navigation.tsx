@@ -4,75 +4,75 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export default function Navigation() {
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-        };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
 
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-    return (
-        <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
-            <div className="container">
-                <div className="nav-content">
-                    <div className="nav-logo">
-                        <h1 className="logo-text">
-                            <span className="gradient-text">Lifestyle</span>
-                        </h1>
-                    </div>
+  return (
+    <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
+      <div className="container">
+        <div className="nav-content">
+          <div className="nav-logo">
+            <h1 className="logo-text">
+              <span className="gradient-text">Lifestyle</span>
+            </h1>
+          </div>
 
-                    <ul className="nav-menu">
-                        <li><a href="#stories" className="nav-link">Stories</a></li>
-                        <li><a href="#lifestyle" className="nav-link">Lifestyle</a></li>
-                        <li><a href="#fashion" className="nav-link">Fashion</a></li>
-                        <li><a href="#wellness" className="nav-link">Wellness</a></li>
-                        <li><a href="#travel" className="nav-link">Travel</a></li>
-                    </ul>
+          <ul className="nav-menu">
+            <li><a href="/" className="nav-link">Home</a></li>
+            <li><a href="/blog" className="nav-link">Blog</a></li>
+            <li><a href="/about" className="nav-link">About</a></li>
+            <li><a href="/team" className="nav-link">Team</a></li>
+            <li><a href="/contact" className="nav-link">Contact</a></li>
+          </ul>
 
-                    <div className="nav-actions">
-                        <button className="search-btn" aria-label="Search">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
-                                <circle cx="8.5" cy="8.5" r="5.5" />
-                                <path d="M12.5 12.5L17 17" />
-                            </svg>
-                        </button>
-                        <button className="subscribe-btn">Subscribe</button>
+          <div className="nav-actions">
+            <button className="search-btn" aria-label="Search">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="8.5" cy="8.5" r="5.5" />
+                <path d="M12.5 12.5L17 17" />
+              </svg>
+            </button>
+            <button className="subscribe-btn">Subscribe</button>
 
-                        <button
-                            className="mobile-menu-btn"
-                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            aria-label="Toggle menu"
-                        >
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                {isMobileMenuOpen ? (
-                                    <path d="M6 18L18 6M6 6l12 12" />
-                                ) : (
-                                    <path d="M3 12h18M3 6h18M3 18h18" />
-                                )}
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
+            <button
+              className="mobile-menu-btn"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                {isMobileMenuOpen ? (
+                  <path d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path d="M3 12h18M3 6h18M3 18h18" />
+                )}
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
 
-            {isMobileMenuOpen && (
-                <div className="mobile-menu glass-dark">
-                    <ul className="mobile-nav-menu">
-                        <li><a href="#stories" onClick={() => setIsMobileMenuOpen(false)}>Stories</a></li>
-                        <li><a href="#lifestyle" onClick={() => setIsMobileMenuOpen(false)}>Lifestyle</a></li>
-                        <li><a href="#fashion" onClick={() => setIsMobileMenuOpen(false)}>Fashion</a></li>
-                        <li><a href="#wellness" onClick={() => setIsMobileMenuOpen(false)}>Wellness</a></li>
-                        <li><a href="#travel" onClick={() => setIsMobileMenuOpen(false)}>Travel</a></li>
-                    </ul>
-                </div>
-            )}
+      {isMobileMenuOpen && (
+        <div className="mobile-menu glass-dark">
+          <ul className="mobile-nav-menu">
+            <li><a href="#stories" onClick={() => setIsMobileMenuOpen(false)}>Stories</a></li>
+            <li><a href="#lifestyle" onClick={() => setIsMobileMenuOpen(false)}>Lifestyle</a></li>
+            <li><a href="#fashion" onClick={() => setIsMobileMenuOpen(false)}>Fashion</a></li>
+            <li><a href="#wellness" onClick={() => setIsMobileMenuOpen(false)}>Wellness</a></li>
+            <li><a href="#travel" onClick={() => setIsMobileMenuOpen(false)}>Travel</a></li>
+          </ul>
+        </div>
+      )}
 
-            <style jsx>{`
+      <style jsx>{`
         .navigation {
           position: fixed;
           top: 0;
@@ -248,6 +248,6 @@ export default function Navigation() {
           }
         }
       `}</style>
-        </nav>
-    );
+    </nav>
+  );
 }
