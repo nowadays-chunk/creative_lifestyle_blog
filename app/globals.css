@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
 /* ============================================
    CREATIVE LIFESTYLE BLOG - DESIGN SYSTEM
    Visual-First UX | Glassmorphism | Storytelling Design
    ============================================ */
 
 /* === GOOGLE FONTS === */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* === CSS RESET & BASE === */
 * {
@@ -293,6 +295,22 @@ a:hover {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
 }
 
 @keyframes float {
