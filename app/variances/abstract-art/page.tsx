@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { posts } from '@/lib/blog-data';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Chaos & Color - The Abstract Art Experience",
+    description: "Explore the intersection of raw emotion and vivid color. A digital gallery dedicated to the power of abstract expressionism.",
+    keywords: ["abstract art", "expressionism", "modern art", "creative inspiration", "digital gallery"],
+};
 
 export default function AbstractArtHome() {
     return (

@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { posts } from '@/lib/blog-data';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Clear Perspectives - The Future of Design",
+    description: "A showcase of clarity, transparency, and modern aesthetics. Dive into the world of glassmorphism and futuristic UI design.",
+    keywords: ["glassmorphism", "UI design", "modern aesthetics", "design trends", "futuristic design"],
+};
 
 export default function GlassmorphismHome() {
     return (

@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { posts } from '@/lib/blog-data';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Electric Nights - Cyberpunk Culture & pop",
+    description: "Dive into the neon-drenched world of cyberpop. Exploring technology, synthwave aesthetics, and the future of pop culture.",
+    keywords: ["cyberpop", "neon aesthetics", "synthwave", "cyberpunk", "pop culture", "future trends"],
+};
 
 export default function NeonCyberpopHome() {
     return (

@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { posts } from '@/lib/blog-data';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Concrete Jungle - Street Culture & Style",
+    description: "From the pavement to the soul. Exploring urban art, streetwear, and the raw energy of the concrete jungle.",
+    keywords: ["street culture", "urban art", "streetwear", "city life", "underground style"],
+};
 
 export default function UrbanStreetHome() {
     return (

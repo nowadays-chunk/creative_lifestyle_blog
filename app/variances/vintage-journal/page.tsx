@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { posts } from '@/lib/blog-data';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Timeless Tales - The Vintage Journal",
+    description: "A celebration of history and character. Exploring the beauty of the past through vintage collections, heritage stories, and old-world charm.",
+    keywords: ["vintage", "heritage", "history", "timeless style", "retro", "journal"],
+};
 
 export default function VintageJournalHome() {
     return (

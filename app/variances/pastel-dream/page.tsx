@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { posts } from '@/lib/blog-data';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Soft Hues - A Pastel Dreamscape",
+    description: "Explore a world of soft colors and gentle aesthetics. A blog dedicated to pastel design, airy spaces, and dreamlike inspiration.",
+    keywords: ["pastel aesthetics", "soft colors", "dreamy design", "minimalist pastel", "lifestyle blog"],
+};
 
 export default function PastelDreamHome() {
     return (

@@ -1,4 +1,10 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
+export const metadata: Metadata = {
+    title: "Eco Roots - Sustainable Living & Stories",
+    description: "Discover the path to a greener future. Tips, stories, and inspiration for a sustainable and eco-conscious lifestyle.",
+    keywords: ["sustainable living", "eco-friendly", "green lifestyle", "sustainability", "eco roots"],
+};
 import Image from 'next/image';
 import { posts } from '@/lib/blog-data';
 

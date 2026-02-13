@@ -1,5 +1,12 @@
 import Link from 'next/link';
 import { posts } from '@/lib/blog-data';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Insert Coin - The Retro Gaming Blog",
+    description: "Level up your nostalgia. Exploring the golden age of arcade gaming, retro consoles, and the pixel art that defined a generation.",
+    keywords: ["retro gaming", "arcade games", "nostalgia", "pixel art", "gaming blog", "8-bit culture"],
+};
 
 export default function RetroArcadeHome() {
     return (

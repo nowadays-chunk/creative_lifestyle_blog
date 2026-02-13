@@ -19,50 +19,65 @@ export default function DiscoveryHome() {
       <div className="fixed inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none"></div>
 
       {/* Hero Section */}
-      <header className="relative py-32 md:py-48 px-6 text-center z-10">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+      <header className="relative py-40 md:py-60 px-8 text-center z-10">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-600/10 rounded-full blur-[160px] -z-10 pointer-events-none"></div>
 
-        <h1 className="text-7xl md:text-9xl font-black mb-6 tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-neutral-500 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-          DESIGN <br /> VARIATIONS.
-        </h1>
-        <p className="text-xl md:text-3xl text-neutral-400 max-w-3xl mx-auto font-light leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-          One Core Identity. <span className="text-white font-bold">Eleven</span> Unique Expressions.
-        </p>
+        <div className="space-y-6 animate-in fade-in slide-in-from-bottom-12 duration-1000">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium tracking-[0.2em] uppercase text-neutral-400">
+            Premium Web Exploration
+          </span>
+          <h1 className="text-8xl md:text-[10rem] font-black mb-8 tracking-[-0.04em] leading-[0.85] text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-neutral-600">
+            CREATIVE <br /> LIFESTYLE.
+          </h1>
+          <p className="text-xl md:text-4xl text-neutral-400 max-w-4xl mx-auto font-light leading-relaxed">
+            A curate collection of <span className="text-white font-semibold italic">digital experiences</span>. <br className="hidden md:block" />
+            Discover 10+ unique design variances for one core identity.
+          </p>
+        </div>
       </header>
 
       {/* Grid */}
-      <main className="max-w-[1800px] mx-auto px-6 pb-48 relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-          {variances.map((v, i) => (
-            <Link key={v.id} href={`/variances/${v.id}`} className={`group relative h-80 rounded-2xl p-6 flex flex-col justify-between transition-all duration-500 ease-out overflow-hidden ${v.color} ${v.hover} ${i === variances.length - 1 ? 'md:col-span-2 xl:col-span-2' : ''}`}>
-              <div className="absolute top-4 right-4 text-xs font-bold uppercase opacity-60 border border-current px-2 py-1 rounded-full">
-                /{(i + 1).toString().padStart(2, '0')}
-              </div>
+      <main className="max-w-7xl mx-auto px-12 md:px-24 pb-60 relative z-10">
+        <div className="flex flex-col items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+            {variances.map((v, i) => (
+              <Link
+                key={v.id}
+                href={`/variances/${v.id}`}
+                className={`group relative h-[450px] rounded-3xl p-8 flex flex-col justify-between transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] overflow-hidden ${v.color} ${v.hover} border border-white/5 shadow-2xl`}
+              >
+                <div className="absolute top-6 right-6 text-xs font-bold uppercase opacity-40 border border-current px-3 py-1.5 rounded-full tracking-widest">
+                  {v.id.replace('-', ' ')}
+                </div>
 
-              <div className="mt-auto transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                <h2 className="text-3xl font-black uppercase leading-none mb-2 tracking-tight">
-                  {v.name}
-                </h2>
-                <p className="font-medium text-sm opacity-80 uppercase tracking-widest">
-                  {v.desc}
-                </p>
-              </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
-              {/* Hover Effect Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10 mt-auto transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  <h2 className="text-4xl font-black uppercase leading-tight mb-3 tracking-tighter">
+                    {v.name}
+                  </h2>
+                  <p className="font-semibold text-xs opacity-70 uppercase tracking-[0.3em]">
+                    {v.desc}
+                  </p>
+                </div>
 
-              {/* Arrow */}
-              <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-4 group-hover:translate-x-0">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-              </div>
-            </Link>
-          ))}
+                {/* Arrow Icon */}
+                <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-10 group-hover:translate-x-0 scale-75 group-hover:scale-100">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </main>
 
-      <footer className="text-center pb-12 text-neutral-600 text-sm relative z-10 flex flex-col items-center gap-4">
-        <div className="w-px h-16 bg-gradient-to-b from-neutral-800 to-transparent"></div>
-        <p>Engineered by Antigravity.</p>
+      <footer className="text-center pb-20 text-neutral-500 text-xs relative z-10 flex flex-col items-center gap-6">
+        <div className="w-px h-24 bg-gradient-to-b from-neutral-800 via-neutral-900 to-transparent"></div>
+        <p className="uppercase tracking-[0.4em] font-medium opacity-50">
+          Crafted with precision by Antigravity.
+        </p>
       </footer>
     </div>
   );

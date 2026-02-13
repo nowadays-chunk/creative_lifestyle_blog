@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { posts } from '@/lib/blog-data';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Couture Chronicles - High Fashion Insights",
+    description: "Where elegance meets the avant-garde. Insights into the world of high fashion, runway trends, and timeless style.",
+    keywords: ["high fashion", "couture", "runway trends", "fashion blog", "luxury style"],
+};
 
 export default function HighFashionHome() {
     return (

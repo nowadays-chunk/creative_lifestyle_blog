@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { posts } from '@/lib/blog-data';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Cozy Living - The Nordic Way of Hygge",
+    description: "Embrace simplicity, warmth, and togetherness. Exploring the Scandinavian art of Hygge for a more mindful and cozy life.",
+    keywords: ["hygge", "nordic living", "cozy lifestyle", "mindfulness", "scandinavian design", "simplicity"],
+};
 
 export default function NordicHyggeHome() {
     return (
